@@ -1,32 +1,30 @@
 <template>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid ">
-    <!-- d-flex -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: white !important; border-bottom: solid gray 1px" >
+  <div class="" style="display: flex; width: 100%; justify-content: space-between; align-items: center; margin: 0 25px;">
     <div>
       <img src="/src/assets/clementine_orange_18920.png" alt="" width="45px">
-      <a class="navbar-brand" href="#">오랜모</a>
+      <a class="navbar-brand fs-3" style="color: #FF4D00;" href="#">오랜모</a>
     </div>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div>
       <ul class="navbar-nav">
         <!-- <li class="nav-item col-1">
           <img src="/src/assets/account.png" alt="" width="25px">
           <a class="nav-link active" aria-current="page" href="#">000님</a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="#">마이페이지</a>
+          <button class="nav-link button" type="button"> 마이페이지 </button>          
         </li>
         <li @click="goLogin" class="nav-item">
           <a class="nav-link" href="#">로그인</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">회원가입</a>
+          <button class="nav-link button" type="button"> 회원가입 </button>          
         </li>
       </ul>
-    </div>
+  </div>
   </div>
 </nav>
-
 </template>
 
 <script setup>
@@ -50,9 +48,24 @@ function goLogin() {
    fetchArticles()
  })
 
+
 </script>
 
 <style lang="scss" scoped>
+.button{
+  // position: absolute;
+  // top:50%;
+  background-color:#FF4D00;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  padding:10px;
+  min-height:30px; 
+  min-width: 100px;
+
+
+}
+
 
 </style>
 

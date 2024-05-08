@@ -1,8 +1,12 @@
 <template>
   <div class="container">
+    
     <div class="logo">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
       <img src="/src/assets/clementine_orange_18920.png" alt="" width="100px">
-      <h2 style="color: orange;">오랜모</h2>
+      <h2 style="color: orange; font-family: 'Jua',sans-serif ;">오랜모</h2>
     </div>
   </div>
 
@@ -45,6 +49,7 @@ function goHome() {
 </script>
 
 <style lang="scss" scoped>
+
 
  header{
   display:flex;
