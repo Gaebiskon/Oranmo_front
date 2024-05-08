@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid btn" style="width: 370px; padding-bottom: 90px;">
+    <a target="_blank" href="https://drive.google.com/file/d/1txPgte2T3FcnyqJhjsvsE1lUHoB5yEiT/view?usp=drive_link" class="container-fluid btn" style="width: 370px; padding-bottom: 90px;">
         <div class="row justify-content-center" style="position: relative;">
             <div class="col-md-4 text-center align-content-center h2" style="background-color: #F6F2F2;
             /* position: relative; bottom: -60px; */
@@ -11,12 +11,12 @@
                 style="width: 370px; height: 200px; border-radius: 20px; background-color: #FFB800;">
                 2024년 3월 학평(부산)
             </div>
-            <btn class="col-md-4 btn text-center text-white align-content-center fw-bold fs-4"
+            <button class="col-md-4 btn text-center text-white align-content-center fw-bold fs-4"
                 style="position: absolute; bottom: 0px; width: 370px; height: 60px; border-radius: 20px; background-color: #EEA753;">
                 응시하기
-            </btn>
+            </button>
         </div>
-    </div>
+    </a>
 </template>
 
 <script setup>
