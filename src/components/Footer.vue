@@ -1,4 +1,6 @@
 <script setup>
+import TestPaper from './TestPaper.vue';
+
 defineProps({
     msg: {
         type: String,
@@ -8,22 +10,24 @@ defineProps({
 </script>
 
 <template>
-    <!-- <div class="container-fluid vh-100 bg-success text-white h-75">자주 묻는 질문</div> -->
-
-    <!--  -->
-
+    <TestPaper></TestPaper>
+    <TestPaper></TestPaper>
+    <TestPaper></TestPaper>
+    <TestPaper></TestPaper>
+    <TestPaper></TestPaper>
+    <TestPaper></TestPaper>
     <div id="component" class="container-fluid py-4" style="background-color: #3D6E1E;">
         <p class="text-center fs-6 m-0 px-5 py-2">
-            <a class="text-white">
-                자주 묻는 질문
+            <a href=# class="text-white text-decoration-none h6">
+                자주 묻는 질문 |
             </a>
-            <a class="text-white">
-                이용약관
+            <a href=# class="text-white text-decoration-none">
+                이용약관 |
             </a>
-            <a class="text-white">
-                개인정보 보호 정책
+            <a href=# class="text-white text-decoration-none">
+                개인정보 보호 정책 |
             </a>
-            <a class="text-white">
+            <a href=# class="text-white text-decoration-none">
                 팀 소개
             </a>
         </p>
@@ -31,7 +35,7 @@ defineProps({
             <p class="text-white fs-6  m-0 px-3 py-2">
                 (주) 개비스콘 (대표 : 우수콩)
                 <br>
-                사업자등록번호 : XXX-XX-XXXXX 사업자정보확인
+                사업자등록번호 : XXX-XX-XXXXX <button class="btn btn-light">사업자정보확인</button>
                 <br>
                 통신판매업신고 : 제 20XX-서울XX-XXXXX호
                 <br>
