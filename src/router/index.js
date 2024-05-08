@@ -23,13 +23,11 @@ const router = createRouter({
       component: MyPage
     },
     {
-      path: '/articles/login',
+      path: '/login',
       name: 'login',
       component: LoginView
     },
-
   ]
-
 })
 
 export default router
