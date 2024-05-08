@@ -16,7 +16,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">마이페이지</a>
         </li>
-        <li class="nav-item">
+        <li @click="goLogin" class="nav-item">
           <a class="nav-link" href="#">로그인</a>
         </li>
         <li class="nav-item">
@@ -32,7 +32,12 @@
 <script setup>
 import { useArticleStore } from '/src/stores/articles'
 import { onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
+function goLogin() {
+  router.push('/login')
+}
 
  const articleStore = useArticleStore()
 
