@@ -93,6 +93,7 @@
     <div class="text-white text-center align-content-center py-1 me-4" style="background-color: green; width: 50px;">과목
     </div>
 
+    <!-- 전체 -->
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="checkbox" id="all_subject" value="all_subject">
       <label class="form-check-label" for="all_subject">전체</label>
@@ -172,107 +173,71 @@
       </div>
     </div>
 
+    <!--  -->
     <!-- 과학 탐구 체크 박스 -->
     <div class="d-flex">
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="science_checkbox" value="science_checkbox">
-        <!-- <label class="form-check-label" for="science_checkbox"></label> -->
-        <!-- 과학탐구 드롭다운 -->
-        <label class="dropdown form-check-label" for="science_checkbox">
-          <button style="border-color: #bbbbc2;" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false" @click="toggleDropdown">
-            과학탐구
+        <input class="form-check-input" type="checkbox" id="science_checkbox" value="science_checkbox"
+          v-model="scienceChecked">
+        <!-- @change="toggleDropdown('science')"> -->
+        <div class="dropdown form-check-label" for="">
+          <button :class="{ active: dropdownOpen.science }" style="border-color: #bbbbc2;" class="btn dropdown-toggle"
+            type="button" data-bs-toggle="dropdown" aria-expanded="false" :disabled="!scienceChecked">
+            {{ selectedOption.science.value || '과학탐구' }}
           </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">물리학Ⅰ</a></li>
-            <li><a class="dropdown-item" href="#">화학Ⅰ</a></li>
-            <li><a class="dropdown-item" href="#">생명과학Ⅰ</a></li>
-            <li><a class="dropdown-item" href="#">지구과학Ⅰ</a></li>
-            <li><a class="dropdown-item" href="#">물리학Ⅱ</a></li>
-            <li><a class="dropdown-item" href="#">화학Ⅱ</a></li>
-            <li><a class="dropdown-item" href="#">생명과학Ⅱ</a></li>
-            <li><a class="dropdown-item" href="#">지구과학Ⅱ</a></li>
+          <ul v-show="dropdownOpen.science" class="dropdown-menu">
+            <li v-for="(item, index) in scienceOptions" :key="index">
+              <a class="dropdown-item" href="#" @click="selectOption('science', item)">{{ item }}</a>
+            </li>
           </ul>
-        </label>
+        </div>
       </div>
-    </div class="d-flex">
+    </div>
+
+    <!--  -->
   </div>
 
   <!-- 시험지 만들기 버튼  -->
   <div class="d-flex justify-content-center ">
     <button class="nav-link primary_btn" type="button"> 시험지 만들기 </button>
   </div>
-
-
-  <!-- <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="subject_kor">
-    <label class="form-check-label" for="inlineCheckbox2">국어</label>
-  
-    
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="subject_math">
-    <label class="form-check-label" for="inlineCheckbox2">수학</label>
-  </div> -->
-
-
-  <!-- <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="subject_history">
-    <label class="form-check-label" for="inlineCheckbox2">한국사</label>
-  </div> -->
-
-
-
-
-
-  <!-- <div class="d-flex">
-     <div class="dropdown">
-    <button style="border-color: #bbbbc2;" class="btn btn-hover:hover dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      사회탐구
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">생활과 윤리</a></li>
-      <li><a class="dropdown-item" href="#">윤리와 사상</a></li>
-      <li><a class="dropdown-item" href="#">한국지리</a></li>
-      <li><a class="dropdown-item" href="#">세계지리</a></li>
-      <li><a class="dropdown-item" href="#">동아시아사</a></li>
-      <li><a class="dropdown-item" href="#">세계사</a></li>
-      <li><a class="dropdown-item" href="#">경제</a></li>
-      <li><a class="dropdown-item" href="#">정치와 법</a></li>
-      <li><a class="dropdown-item" href="#">사회·문화</a></li>
-    </ul>
-  </div>
-  
-  <ul>
-  
-  </ul>
-  
-  
-  
-  <div class="dropdown">
-    <button style="border-color: #bbbbc2;" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      과학탐구
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">물리학Ⅰ</a></li>
-      <li><a class="dropdown-item" href="#">화학Ⅰ</a></li>
-      <li><a class="dropdown-item" href="#">생명과학Ⅰ</a></li>
-      <li><a class="dropdown-item" href="#">지구과학Ⅰ</a></li>
-      <li><a class="dropdown-item" href="#">물리학Ⅱ</a></li>
-      <li><a class="dropdown-item" href="#">화학Ⅱ</a></li>
-      <li><a class="dropdown-item" href="#">생명과학Ⅱ</a></li>
-      <li><a class="dropdown-item" href="#">지구과학Ⅱ</a></li>
-   
-    </ul>
-  </div>
-  </div> -->
-
-
 </template>
 
 
 <script setup>
+import { ref } from 'vue';
 
+const scienceChecked = ref(false);
+
+
+const dropdownOpen = {
+  science: ref(false),
+  social: ref(false)
+};
+
+const selectedOption = {
+  science: ref('과학탐구'),
+  social: ref(null)
+};
+
+const scienceOptions = [
+  '물리학Ⅰ', '화학Ⅰ', '생명과학Ⅰ', '지구과학Ⅰ',
+  '물리학Ⅱ', '화학Ⅱ', '생명과학Ⅱ', '지구과학Ⅱ'
+];
+
+const socialOptions = [
+  '한국사Ⅰ', '세계사Ⅰ', '동아시아사Ⅰ', '세계지리Ⅰ',
+  '한국사Ⅱ', '세계사Ⅱ', '동아시아사Ⅱ', '세계지리Ⅱ'
+];
+
+const toggleDropdown = (type) => {
+  dropdownOpen[type].value = !dropdownOpen[type].value;
+};
+
+const selectOption = (type, option) => {
+  selectedOption[type].value = option;
+  dropdownOpen[type].value = false; // 선택한 드롭다운 닫기
+};
 </script>
 
 <style>
@@ -305,5 +270,15 @@
 .dropdown-item.active {
   background-color: #FF4D00;
   color: #fff;
+}
+
+/* .dropdown-menu 클래스의 스타일을 수정하여 드롭다운 메뉴가 기본적으로 보이지 않도록 설정 */
+.dropdown-menu {
+  display: none;
+}
+
+/* 드롭다운이 열린 경우에만 드롭다운 메뉴가 보이도록 함 */
+.dropdown.open .dropdown-menu {
+  display: block;
 }
 </style>
