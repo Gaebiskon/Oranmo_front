@@ -1,6 +1,8 @@
 <template>
-  <NavBar></NavBar>
-  <Filter></Filter>
+  <Navbar></Navbar>
+  <div style="margin: 50px; width: 80%; display: flex; flex-direction: column; justify-content: center;">
+    <Filter></Filter>
+  </div>
   <TestLayout></TestLayout>
   <Footer></Footer>
 </template>

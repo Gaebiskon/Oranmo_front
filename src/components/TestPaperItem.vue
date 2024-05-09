@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-4 text-center align-content-center fw-bold h4"
                 style="width: 300px; height: 180px; border-radius: 20px; background-color: #FFB800;">
-                2024년 3월 학평(부산)
+                2024년 3월 학평(서울)
             </div>
             <button class="col-md-4 btn text-center text-white align-content-center fw-bold fs-4"
                 style="position: absolute; bottom: 5px; width: 300px; height: 60px; border-radius: 20px; background-color: #EEA753;">

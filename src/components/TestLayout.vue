@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import TestPaper from './TestPaper.vue';
+import TestPaper from './TestPaperItem.vue';
 
 </script>
 
