@@ -1,5 +1,4 @@
 <template>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary"
         style="background-color: white !important; border-bottom: solid gray 1px">
         <div class=""

@@ -1,6 +1,4 @@
 <script setup>
-import TestPaper from './TestPaper.vue';
-
 defineProps({
     msg: {
         type: String,
@@ -10,12 +8,7 @@ defineProps({
 </script>
 
 <template>
-    <TestPaper></TestPaper>
-    <TestPaper></TestPaper>
-    <TestPaper></TestPaper>
-    <TestPaper></TestPaper>
-    <TestPaper></TestPaper>
-    <TestPaper></TestPaper>
+
     <div id="component" class="container-fluid py-4" style="background-color: #3D6E1E;">
         <p class="text-center fs-6 m-0 px-5 py-2">
             <a href=# class="text-white text-decoration-none h6">
