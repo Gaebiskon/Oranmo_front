@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import Footer from '@/components/Footer.vue';
+import Footer from '@/components/Footer.vue'
 import { useArticleStore } from '/src/stores/articles'
 import { reactive } from 'vue'
 
