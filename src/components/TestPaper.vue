@@ -1,5 +1,6 @@
 <template>
-    <a target="_blank" href="https://drive.google.com/file/d/1txPgte2T3FcnyqJhjsvsE1lUHoB5yEiT/view?usp=drive_link" class="container-fluid btn" style="width: 370px; padding-bottom: 90px;">
+    <a target="_blank" href="https://drive.google.com/file/d/1txPgte2T3FcnyqJhjsvsE1lUHoB5yEiT/view?usp=drive_link"
+        class="container-fluid btn" style="width: 370px; margin-bottom: 90px;">
         <div class="row justify-content-center" style="position: relative;">
             <div class="col-md-4 text-center align-content-center h2" style="background-color: #F6F2F2;
             /* position: relative; bottom: -60px; */
