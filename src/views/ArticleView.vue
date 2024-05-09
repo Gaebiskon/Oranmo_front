@@ -13,13 +13,13 @@
           <a class="nav-link active" aria-current="page" href="#">000님</a>
         </li> -->
         <li class="nav-item">
-          <button class="nav-link button" type="button"> 마이페이지 </button>          
+          <button class="nav-link primary_btn" type="button"> 마이페이지 </button>          
         </li>
         <li @click="goLogin" class="nav-item">
           <a class="nav-link" href="#">로그인</a>
         </li>
         <li class="nav-item">
-          <button class="nav-link button" type="button"> 회원가입 </button>          
+          <button class="nav-link primary_btn" type="button"> 회원가입 </button>          
         </li>
       </ul>
   </div>
@@ -52,9 +52,7 @@ function goLogin() {
 </script>
 
 <style lang="scss" scoped>
-.button{
-  // position: absolute;
-  // top:50%;
+.primary_btn{
   background-color:#FF4D00;
   color: #fff;
   border:none;
@@ -62,8 +60,6 @@ function goLogin() {
   padding:10px;
   min-height:30px; 
   min-width: 100px;
-
-
 }
 
 
