@@ -1,7 +1,9 @@
 <template>
   <!-- 학년 선택 -->
-  <div class="d-flex">
-    <div class="text-white text-center py-1" style="background-color: green; width: 50px;">학년 </div>
+  <div class="d-flex mb-4">
+    <!-- 학년 범주 -->
+    <div class="text-white text-center py-1 me-4" style="background-color: green; width: 50px;">학년 </div>
+    <!-- 학년 드롭다운 -->
     <div class="dropdown">
       <button style="border-color: #bbbbc2;" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
         aria-expanded="false">
@@ -15,11 +17,10 @@
     </div>
   </div>
 
-  <br>
 
   <!-- 연도 선택 -->
-  <div class="d-flex">
-    <div class="text-white text-center py-1" style="background-color: green; width: 50px;">연도</div>
+  <div class="d-flex mb-4">
+    <div class="text-white text-center py-1 me-4" style="background-color: green; width: 50px;">연도</div>
     <div class="dropdown">
       <button style="border-color: #bbbbc2;" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
         aria-expanded="false">
@@ -31,7 +32,7 @@
         <li><a class="dropdown-item" href="#">2024</a></li>
       </ul>
     </div>
-    <div style="font-size: 25px; margin: 0 20x;">~</div>
+    <div style="font-size: 25px; margin: 0px 20px;">~</div>
     <div class="dropdown">
       <button style="border-color: #bbbbc2;" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
         aria-expanded="false">
@@ -44,10 +45,12 @@
       </ul>
     </div>
   </div>
-  <br>
+
   <!-- 월 선택 -->
-  <div class="d-flex">
-    <div class="text-white text-center py-1" style="background-color: green; width: 50px;">월 </div>
+  <div class="d-flex mb-4">
+    <!-- 월 범주 -->
+    <div class="text-white text-center py-1 me-4" style="background-color: green; width: 50px;">월 </div>
+    <!-- 월 체크박스 -->
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="all_month">
       <label class="form-check-label" for="inlineCheckbox1">전체</label>
@@ -61,20 +64,12 @@
       <label class="form-check-label" for="inlineCheckbox2">4월</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="month5">
-      <label class="form-check-label" for="inlineCheckbox2">5월</label>
-    </div>
-    <div class="form-check form-check-inline">
       <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="month6">
       <label class="form-check-label" for="inlineCheckbox2">6월</label>
     </div>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="month7">
       <label class="form-check-label" for="inlineCheckbox2">7월</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="month8">
-      <label class="form-check-label" for="inlineCheckbox2">8월</label>
     </div>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="month9">
@@ -91,9 +86,8 @@
   </div>
 
   <!-- 과목 선택  -->
-  <br>
-  <div class="d-flex">
-    <div class="text-white text-center py-1" style="background-color: green; width: 50px;">과목 </div>
+  <div class="d-flex mb-4">
+    <div class="text-white text-center py-1 me-4" style="background-color: green; width: 50px;">과목 </div>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="all_subject">
       <label class="form-check-label" for="inlineCheckbox2">전체</label>
@@ -194,7 +188,6 @@
 
   <!-- 시험지 만들기 버튼  -->
 
-  <br>
   <div class="container">
     <button class="nav-link primary_btn" type="button"> 시험지 만들기 </button>
   </div>
@@ -268,7 +261,6 @@
 
 
 <script setup>
-
 
 </script>
 
