@@ -1,4 +1,5 @@
 <template>
+<!-- 학년 선택 -->
 <div class="d-flex">
   <div class="text-white text-center py-1" style="background-color: green; width: 50px;">학년 </div>
   <div class="dropdown">
@@ -14,7 +15,7 @@
   </div>
 <br>
 
-
+<!-- 연도 선택 -->
 <div class="d-flex">
   <div class="text-white text-center py-1" style="background-color: green; width: 50px;">연도</div> 
   <div class="dropdown">
@@ -40,7 +41,7 @@
   </div>
 </div>
 <br>
-
+<!-- 월 선택 -->
 <div class="d-flex">
 <div class="text-white text-center py-1" style="background-color: green; width: 50px;">월 </div>  
     <div class="form-check form-check-inline">
@@ -86,10 +87,10 @@
 </div>
 
 
-
+<!-- 과목 선택  -->
 <br>
 <div class="d-flex">
-  <div class="text-white text-center py-1" style="background-color: green; width: 50px;">학년 </div>
+  <div class="text-white text-center py-1" style="background-color: green; width: 50px;">과목 </div>
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="all_subject">
         <label class="form-check-label" for="inlineCheckbox2">전체</label>
@@ -182,9 +183,15 @@
   </ul>
 </div>
 </div>
-
-
 </div>
+
+<!-- 시험지 만들기 버튼  -->
+
+<br>
+<div class="container">
+<button class="nav-link primary_btn" type="button"> 시험지 만들기 </button> 
+</div>
+
 
 <!-- <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="subject_kor">
@@ -266,6 +273,21 @@
     .form-check-label {
         font-size: 20px; /* 원하는 크기로 조정하세요 */
     }
+
+  .primary_btn{
+  background-color:#FF4D00;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  padding:10px 20px;
+  min-height:30px; 
+  min-width: 100px;
+}
+.container {
+  text-align: center;
+}
+
+
 
 </style>
 
