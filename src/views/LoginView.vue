@@ -29,7 +29,7 @@
       </div>
       <div id="forgot">아이디 찾기</div>
       <div id="forgot">비밀번호 찾기</div>
-      <input class="btn btn-success container-fluid" @click="goHome" value="로그인">
+      <input style="background-color: #ff4d00;" class="btn text-white fw-bold container-fluid" @click="goHome" value="로그인">
 
     </form>
   </div>
