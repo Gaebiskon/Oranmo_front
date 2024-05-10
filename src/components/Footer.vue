@@ -8,8 +8,9 @@ defineProps({
 </script>
 
 <template>
-
     <div id="component" class="container-fluid py-4" style="background-color: #3D6E1E;">
+        <p class="text-center text-white fs-6 m-0 px-5 py-2">
+            Copyright © 2024 개비스콘, Inc. All rights reserved.</p>
         <p class="text-center fs-6 m-0 px-5 py-2">
             <a href=# class="text-white text-decoration-none h6">
                 자주 묻는 질문 |
