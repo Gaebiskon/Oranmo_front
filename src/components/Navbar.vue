@@ -67,4 +67,5 @@ onMounted(() => {
 }
 </style>
 
-<img src="/src/assets/clementine_orange_18920.png" alt="" width="45px">
+
+<img src="/src/assets/clementine_orange_18920.png" alt="" width="45px"></img>
