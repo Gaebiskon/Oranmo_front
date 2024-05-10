@@ -4,7 +4,7 @@
         <div class=""
             style="display: flex; width: 100%; justify-content: space-between; align-items: center; margin: 0 25px;">
             <div>
-                <img src="/src/assets/clementine_orange_18920.png" alt="" width="45px">
+                <img src="/src/assets/free-icon-orange-slice-1999991.png" alt="" width="45px">
                 <a class="navbar-brand fs-3" style="color: #FF4D00;" href="#">오랜모</a>
             </div>
             <div>
@@ -63,4 +63,5 @@ onMounted(() => {
 }
 </style>
 
-<img src="/src/assets/clementine_orange_18920.png" alt="" width="45px">
+
+<img src="/src/assets/clementine_orange_18920.png" alt="" width="45px"></img>
