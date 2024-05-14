@@ -3,10 +3,13 @@
 
 ## 팀원 : 손명근, 우수빈, 이다은, 이명준
 
+### 오랜모 프로젝트 문서
+#### [문서 바로가기](https://cyan-krill-a81.notion.site/8a64cd9ef30749769adf0bf554f0a0a5?pvs=4)
+
 ### 실행 방법
 
-1. 패키지 설치
-npm i
+1. 패키지 설치 : 
+```npm i```
 
-3. 가상 환경 실행
-npm run dev
+3. 가상 환경 실행 : 
+```npm run dev```
